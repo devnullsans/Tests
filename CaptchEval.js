@@ -13,6 +13,7 @@ function toBase64(file) {
 async function getImg() {
   const img = document.body.querySelector('img')
   const pre = document.body.querySelector('pre')
+  // const res = await fetch('/ereg/JpegImage.aspx')
   const res = await fetch('/Common/php/securimage_show_igr.php')
   const jpg = await res.blob()
   const b64 = await toBase64(jpg)
@@ -25,7 +26,8 @@ async function getImg() {
     mode: 'cors'
   })
   const { data } = await ocr.json()
-  pre.innerText = data[0].replaceAll(/\s/g, '')
+  // pre.innerText = data[0].replaceAll(/\D/g, '')
+  pre.innerText = data[0].replaceAll(/\W/g, '')
 }
 
 <pre style="color: #fff;text-align: center;font-size: xxx-large;font-weight: bold;"></pre>
