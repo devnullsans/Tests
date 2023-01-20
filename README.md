@@ -47,7 +47,7 @@ moreReply = Array.from(
     .querySelector("#below")
     .querySelector("#comments")
     .querySelector("#contents")
-    .querySelectorAll("img")
+    .querySelectorAll("#replies:not([hidden])")
 )
   .map((re) =>
     re
@@ -95,7 +95,7 @@ async function download() {
     .querySelector("#comments")
     .querySelector("#contents")
     .querySelectorAll("#img");
-  console.log(`There are ${imgs?.length} imgs`);
+  console.log(`There are ${imgs.length} imgs`);
   const filt = new Set(
     Array.from(imgs)
       ?.filter((img) => fRx.test(img.src))
