@@ -1,3 +1,4 @@
+/*
 if X[i] > X[j] then X[i] = X[i] - X[j]
         j   i
 X = [6, 9, 21]
@@ -16,7 +17,7 @@ X_4 = [6, 3, 3]  # -> X_4[2] = X_3[2] - X_3[1] = 6 - 3
 X_5 = [3, 3, 3]  # -> X_5[1] = X_4[0] - X_4[1] = 6 - 3
 
 The returning output is the sum of the final transformation (here 9).
-
+*/
 
 const x = [6, 9, 21]
 
