@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <style>
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body {
+  background-image: radial-gradient(circle, #333, #000 400px);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1rem;
+  place-items: center;
+}
+.sqr {
+  width: 120px;
+  height: 120px;
+  background-image: conic-gradient(#f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+  border-radius: 10px;
+  cursor: pointer;
+  rotate: 0deg;
+  transition: rotate 1s ease-out;
+  animation: rotate 0.5s infinite linear paused;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sqr:hover {
+  animation-play-state: running;
+  rotate: -360deg;
+}
+    </style>
+    <title>Rotate Spinner</title>
+  </head>
+  <body>
+    <div class="sqr"></div>
+  </body>
+</html>
